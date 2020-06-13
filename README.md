@@ -27,10 +27,10 @@
         //A,B - C ; C - D,E ; D,E - F ; F - Q
         assertEquals(false, obj.function(new User("labinot", "labinot", "labi.aziri1@gmail.com"), addUserToList("labinot", "labinot", "labi.aziri1@gmail.com")));
 
-        //A,B - C ; C - D,E ; D,E - F ; F - G ; G - H ; H - I ; I - K ; K - M ; M - O ; O - Q
+        //A,B - C ; C - D,E ; D,E - F ; F - G ; G - H(i=0) ; H(i=0) - H(i<p.l()) ; H(i<p.l()) I ; I - K ; K - M ; M - H(i++) ; H(i++) - H(i<p.l()) ; H(i<p.l()) - O ; O - Q
         assertEquals(false, obj.function(new User("labinot", "labinotttt", "labi.aziri1@gmail.com"), addUserToList("1abinot", "labinotttt", "labi.aziri1@gmail.com")));
 
-        //A,B - C ; C - D,E ; D,E - F ; F - G ; G - H ; H - I ; I - J ; J - K ; K - L ; L - M ; M - N ; N - O ; O - P
+        //A,B - C ; C - D,E ; D,E - F ; F - G ; G - H(i=0) ; H(i=0) - H(i<p.l()) ; H(i<p.l()) - I ; I - J ; J - K; K - L ; L-M ; M - N ; N - H(i++) ; H(i++) - H(i<p.l()) ; H(i<p.l()) - O ; O - P
         assertEquals(true, obj.function(new User("labinot", "Labi.1234", "labi.aziri1@gmail.com"), addUserToList("labinot", "Labinot.1234", "labi.aziri1@gmail.com")));
     }
 ```
@@ -72,6 +72,8 @@
         assertEquals(false, obj.function(new User("labinot", "labinot_", "labi.aziri1@gmail.com"), addUserToList("labinot", "labinot_", "labi.aziri1@gmail.com")));
     }
 ```
+
+### Објаснување на напишаните unit tests
 
 ## Every Branch Documentation
 
