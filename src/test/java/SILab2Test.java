@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -10,8 +11,8 @@ class SILab2Test {
 
     private List<String> addUserToList(String... user) {
         List<String> allUsers = new ArrayList<>();
-        if (user[0] != null)
-            allUsers.add(user[0]);
+        List<String> usersData = Arrays.asList(user);
+        allUsers.addAll(usersData);
         return allUsers;
     }
 
