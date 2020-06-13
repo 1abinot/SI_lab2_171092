@@ -32,7 +32,6 @@
         assertEquals(true, obj.function(new User("labinot", "Labi.1234", "labi.aziri1@gmail.com"), addUserToList("labinot", "Labinot.1234", "labi.aziri1@gmail.com")));
     }
 ```
-<br/>
 ### Тест случаи според критериумот Multiple Condition
 ```java
     @Test
