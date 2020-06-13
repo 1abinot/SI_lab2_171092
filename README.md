@@ -44,9 +44,9 @@
         //T T
         assertEquals(true, obj.function(new User("labinot","Labi.1234","labi.aziri1@gmail.com"),addUserToList("labinot","labinot","labi.aziri1@gmail.com")));
         //T F
-        assertEquals(false, obj.function(new User("labinot", "labi", "labi.aziri1@gmail.com"), addUserToList("labinot", "labi", "labi.aziri1@gmail.com")));
+        assertEquals(false, obj.function(new User("labinot", null , "labi.aziri1@gmail.com"), addUserToList("labinot", null , "labi.aziri1@gmail.com")));
         //F X
-        assertEquals(false,obj.function(new User("labinot","labi.123","labi.aziri1@gmail.com"),addUserToList("labinot","labi.123","labi.aziri1@gmail.com")));
+        assertEquals(false,obj.function(new User(null,"labi.123","labi.aziri1@gmail.com"),addUserToList(null ,"labi.123","labi.aziri1@gmail.com")));
 
 
 
@@ -131,8 +131,8 @@
 > digit && upper && special
 
 | Combination | Possible Test Case   | Branch |
-| ----------- | -------------------- | ------ |
-| T T T       | password="Labi_1234" | O - P  |
-| T T F       | password="Labi1234"  | O - Q  |
-| T F X       | password="labi_1234" | O - Q  |
-| F X X       | password="labinot_"  | O - Q  |
+| :---------: | -------------------- | :----: |
+|    T T T    | password="Labi_1234" | O - P  |
+|    T T F    | password="Labi1234"  | O - Q  |
+|    T F X    | password="labi_1234" | O - Q  |
+|    F X X    | password="labinot_"  | O - Q  |
