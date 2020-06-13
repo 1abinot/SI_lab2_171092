@@ -103,3 +103,36 @@
 | O-Q               |                            |                                                              |                                                              |                              *                               |                                                              |
 | O-P               |                            |                                                              |                                                              |                                                              |                              *                               |
 
+<br/>
+<br/>
+
+## Multiple Condition Documentation
+
+> user.getUsername()!=null && user.getPassword()!=null 
+
+| Combination | Possible Test Case                        | Branch  |
+| :---------: | :---------------------------------------- | :-----: |
+|     T T     | username="labinot" , password="Labi.1234" | C - D,E |
+|     T F     | username="labinot" , password=null        |  C - Q  |
+|     F X     | username=null , password="labi123"        |  C - Q  |
+
+<br/>
+
+> passwordLower.contains(user.getUsername().toLowerCase()) && password.length()>=8
+
+| Combination | Possible Test Case                       | Branch |
+| :---------: | ---------------------------------------- | :----: |
+|     T T     | username="labinot" , password="Labi_123" | F - G  |
+|     T F     | username="labinot" , password="Labi123"  | F - Q  |
+|     F X     | username="labinot" , password="labinot"  | F - Q  |
+
+<br/>
+
+> digit && upper && special
+
+| Combination | Possible Test Case   | Branch |
+| ----------- | -------------------- | ------ |
+| T T T       | password="Labi_1234" | O - P  |
+| T T F       | password="Labi1234"  | O - Q  |
+| T F X       | password="labi_1234" | O - Q  |
+| F X X       | password="labinot_"  | O - Q  |
