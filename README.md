@@ -14,7 +14,7 @@
 <br/>
 ### Тест случаи според критериумот Every Branch
 ```java
-@Test
+    @Test
     void everyBranchTest() {
         //A,B - Q
         assertEquals(false, obj.function(null, addUserToList("null")));
@@ -35,7 +35,7 @@
 <br/>
 ### Тест случаи според критериумот Multiple Condition
 ```java
-@Test
+    @Test
     void multipleConditionsTest() {
 
         //user.getUsername()!=null && user.getPassword()!=null
