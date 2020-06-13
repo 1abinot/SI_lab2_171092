@@ -7,4 +7,4 @@
 <br/>
 ##### Control Flow Graph
 <!--- Images -->
-![Control Flow Graph](images/CFG.jpg.)
+![Control Flow Graph](/images/CFG.jpg.)
