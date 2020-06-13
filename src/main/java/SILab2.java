@@ -27,26 +27,26 @@ class User {
 public class SILab2 {
 
     public boolean function (User user, List<String> allUsers) {
-        String specialCharacters="!#$%&'()*+,-./:;<=>?@[]^_`{|}";
-        if (user!=null) {
-            if (user.getUsername()!=null && user.getPassword()!=null) {
-                String password = user.getPassword();
-                String passwordLower = password.toLowerCase();
-                if (!passwordLower.contains(user.getUsername().toLowerCase()) && password.length()>=8) {
-                    boolean digit = false, upper = false, special = false;
-                    for (int i=0;i<password.length();i++) {
-                        if (Character.isDigit(password.charAt(i)))
-                            digit = true;
-                        if (Character.isUpperCase(password.charAt(i)))
-                            upper = true;
-                        if (specialCharacters.contains(String.valueOf(password.charAt(i))))
-                            special = true;
+        String specialCharacters="!#$%&'()*+,-./:;<=>?@[]^_`{|}"; //A
+        if (user!=null) { //B
+            if (user.getUsername()!=null && user.getPassword()!=null) { //C
+                String password = user.getPassword(); //D
+                String passwordLower = password.toLowerCase(); //E
+                if (!passwordLower.contains(user.getUsername().toLowerCase()) && password.length()>=8) { //F
+                    boolean digit = false, upper = false, special = false; //G
+                    for (int i=0;i<password.length();i++) { //H
+                        if (Character.isDigit(password.charAt(i))) //I
+                            digit = true; //J
+                        if (Character.isUpperCase(password.charAt(i))) //K
+                            upper = true; //L
+                        if (specialCharacters.contains(String.valueOf(password.charAt(i)))) //M
+                            special = true; //N
                     }
-                    if (digit && upper && special)
-                        return true;
+                    if (digit && upper && special) //O
+                        return true; //P
                 }
             }
         }
-        return false;
+        return false; //Q
     }
 }
